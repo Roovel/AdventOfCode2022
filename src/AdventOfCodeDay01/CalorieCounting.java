@@ -1,3 +1,5 @@
+package AdventOfCodeDay01;
+
 import java.nio.file.Paths;
 import java.util.Scanner;
 
@@ -9,7 +11,7 @@ public class CalorieCounting {
 
         Elves elves = new Elves();
 
-        try (Scanner scanner = new Scanner(Paths.get("input.txt"))) {
+        try (Scanner scanner = new Scanner(Paths.get("input01.txt"))) {
             while (scanner.hasNextLine()) {
                 String stringRow = scanner.nextLine();
 
