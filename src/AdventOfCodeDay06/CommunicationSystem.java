@@ -11,13 +11,9 @@ import java.util.Scanner;
 
 public class CommunicationSystem {
 
-    private ArrayList<String> packets;
-
-
-
+    //Mostly done with outside help
 
     public CommunicationSystem() {
-        packets = new ArrayList<>();
     }
 
     public String readInputAsString() {
@@ -29,11 +25,6 @@ public class CommunicationSystem {
         {
             throw new RuntimeException(e);
         }
-    }
-
-    public void printPackets()
-    {
-        System.out.println(packets);
     }
 
     public int findMarkers(String input, int length)
