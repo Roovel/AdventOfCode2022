@@ -7,21 +7,39 @@ public class Crate {
 
     private ArrayList<String> crate;
     private int crateNumber;
+    String transferrableCargo;
 
     public Crate(String cargo, int crateNumber) {
         this.crate = new ArrayList<>();
+        this.crateNumber = crateNumber;
 
         String[] parts = cargo.split("");
         this.crate.addAll(Arrays.asList(parts));
     }
 
     public void addCargo(int amount, Crate crate) {
-        String transferrableCargo = "";
+        transferrableCargo = "";
 
         for (int i = crate.getCrateSize() - 1; amount > 0; i--) {
             transferrableCargo = crate.getCrate(i);
             this.crate.add(transferrableCargo);
             amount--;
+        }
+    }
+
+    public void addCargoStack(int amount, Crate crate) {
+        transferrableCargo = "";
+
+        if (amount == crate.getCrateSize()) {
+            for (int i = 0; i < crate.getCrateSize(); i++) {
+                transferrableCargo = crate.getCrate(i);
+                this.crate.add(transferrableCargo);
+        }
+        } else {
+                for (int i = crate.getCrateSize() - amount; i <= crate.getCrateSize() - 1; i++) {
+                    transferrableCargo = crate.getCrate(i);
+                    this.crate.add(transferrableCargo);
+            }
         }
     }
 
@@ -41,8 +59,9 @@ public class Crate {
     }
 
     public void printCargo() {
-        System.out.println(crate);
+        System.out.println(this.crateNumber + ": " + this.crate);
     }
+
 
     public int getCrateNumber() {
         return crateNumber;

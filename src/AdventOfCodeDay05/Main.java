@@ -19,6 +19,17 @@ public class Main {
         Crate eighth = new Crate("VHPSZWRB", 8);
         Crate ninth = new Crate("BMJCGHZW", 9);
 
+        first.printCargo();
+        second.printCargo();
+        third.printCargo();
+        fourth.printCargo();
+        fifth.printCargo();
+        sixth.printCargo();
+        seventh.printCargo();
+        eighth.printCargo();
+        ninth.printCargo();
+        System.out.println("");
+
         shipment.addCrate(first);
         shipment.addCrate(second);
         shipment.addCrate(third);
@@ -34,7 +45,8 @@ public class Main {
         int from;
         int to;
 
-        for (int i = 0; i < crane.amount.size(); i++) {
+        // Solution for part 1
+        /*for (int i = 0; i < crane.amount.size(); i++) {
             amount = crane.amount.get(i);
             from = crane.from.get(i);
             to = crane.to.get(i);
@@ -282,7 +294,259 @@ public class Main {
                 }
                 ninth.removeCargo(amount);
             }
+        }*/ 
+
+        //Solution for part 2
+        for (int i = 0; i < crane.amount.size(); i++) {
+            amount = crane.amount.get(i);
+            from = crane.from.get(i);
+            to = crane.to.get(i);
+
+            if (from == 1) {
+                if (to == 2) {
+                    second.addCargoStack(amount, first);
+                }
+                if (to == 3) {
+                    third.addCargoStack(amount, first);
+                }
+                if (to == 4) {
+                    fourth.addCargoStack(amount, first);
+                }
+                if (to == 5) {
+                    fifth.addCargoStack(amount, first);
+                }
+                if (to == 6) {
+                    sixth.addCargoStack(amount, first);
+                }
+                if (to == 7) {
+                    seventh.addCargoStack(amount, first);
+                }
+                if (to == 8) {
+                    eighth.addCargoStack(amount, first);
+                }
+                if (to == 9) {
+                    ninth.addCargoStack(amount, first);
+                }
+                first.removeCargo(amount);
+            }
+            if (from == 2) {
+                if (to == 1) {
+                    first.addCargoStack(amount, second);
+                }
+                if (to == 3) {
+                    third.addCargoStack(amount, second);
+                }
+                if (to == 4) {
+                    fourth.addCargoStack(amount, second);
+                }
+                if (to == 5) {
+                    fifth.addCargoStack(amount, second);
+                }
+                if (to == 6) {
+                    sixth.addCargoStack(amount, second);
+                }
+                if (to == 7) {
+                    seventh.addCargoStack(amount, second);
+                }
+                if (to == 8) {
+                    eighth.addCargoStack(amount, second);
+                }
+                if (to == 9) {
+                    ninth.addCargoStack(amount, second);
+                }
+                second.removeCargo(amount);
+            }
+            if (from == 3) {
+                if (to == 2) {
+                    second.addCargoStack(amount, third);
+                }
+                if (to == 1) {
+                    first.addCargoStack(amount, third);
+                }
+                if (to == 4) {
+                    fourth.addCargoStack(amount, third);
+                }
+                if (to == 5) {
+                    fifth.addCargoStack(amount, third);
+                }
+                if (to == 6) {
+                    sixth.addCargoStack(amount, third);
+                }
+                if (to == 7) {
+                    seventh.addCargoStack(amount, third);
+                }
+                if (to == 8) {
+                    eighth.addCargoStack(amount, third);
+                }
+                if (to == 9) {
+                    ninth.addCargoStack(amount, third);
+                }
+                third.removeCargo(amount);
+            }
+            if (from == 4) {
+                if (to == 2) {
+                    second.addCargoStack(amount, fourth);
+                }
+                if (to == 3) {
+                    third.addCargoStack(amount, fourth);
+                }
+                if (to == 1) {
+                    first.addCargoStack(amount, fourth);
+                }
+                if (to == 5) {
+                    fifth.addCargoStack(amount, fourth);
+                }
+                if (to == 6) {
+                    sixth.addCargoStack(amount, fourth);
+                }
+                if (to == 7) {
+                    seventh.addCargoStack(amount, fourth);
+                }
+                if (to == 8) {
+                    eighth.addCargoStack(amount, fourth);
+                }
+                if (to == 9) {
+                    ninth.addCargoStack(amount, fourth);
+                }
+                fourth.removeCargo(amount);
+            }
+            if (from == 5) {
+                if (to == 2) {
+                    second.addCargoStack(amount, fifth);
+                }
+                if (to == 3) {
+                    third.addCargoStack(amount, fifth);
+                }
+                if (to == 4) {
+                    fourth.addCargoStack(amount, fifth);
+                }
+                if (to == 1) {
+                    first.addCargoStack(amount, fifth);
+                }
+                if (to == 6) {
+                    sixth.addCargoStack(amount, fifth);
+                }
+                if (to == 7) {
+                    seventh.addCargoStack(amount, fifth);
+                }
+                if (to == 8) {
+                    eighth.addCargoStack(amount, fifth);
+                }
+                if (to == 9) {
+                    ninth.addCargoStack(amount, fifth);
+                }
+                fifth.removeCargo(amount);
+            }
+            if (from == 6) {
+                if (to == 2) {
+                    second.addCargoStack(amount, sixth);
+                }
+                if (to == 3) {
+                    third.addCargoStack(amount, sixth);
+                }
+                if (to == 4) {
+                    fourth.addCargoStack(amount, sixth);
+                }
+                if (to == 5) {
+                    fifth.addCargoStack(amount, sixth);
+                }
+                if (to == 1) {
+                    first.addCargoStack(amount, sixth);
+                }
+                if (to == 7) {
+                    seventh.addCargoStack(amount, sixth);
+                }
+                if (to == 8) {
+                    eighth.addCargoStack(amount, sixth);
+                }
+                if (to == 9) {
+                    ninth.addCargoStack(amount, sixth);
+                }
+                sixth.removeCargo(amount);
+            }
+            if (from == 7) {
+                if (to == 2) {
+                    second.addCargoStack(amount, seventh);
+                }
+                if (to == 3) {
+                    third.addCargoStack(amount, seventh);
+                }
+                if (to == 4) {
+                    fourth.addCargoStack(amount, seventh);
+                }
+                if (to == 5) {
+                    fifth.addCargoStack(amount, seventh);
+                }
+                if (to == 6) {
+                    sixth.addCargoStack(amount, seventh);
+                }
+                if (to == 1) {
+                    first.addCargoStack(amount, seventh);
+                }
+                if (to == 8) {
+                    eighth.addCargoStack(amount, seventh);
+                }
+                if (to == 9) {
+                    ninth.addCargoStack(amount, seventh);
+                }
+                seventh.removeCargo(amount);
+            }
+            if (from == 8) {
+                if (to == 2) {
+                    second.addCargoStack(amount, eighth);
+                }
+                if (to == 3) {
+                    third.addCargoStack(amount, eighth);
+                }
+                if (to == 4) {
+                    fourth.addCargoStack(amount, eighth);
+                }
+                if (to == 5) {
+                    fifth.addCargoStack(amount, eighth);
+                }
+                if (to == 6) {
+                    sixth.addCargoStack(amount, eighth);
+                }
+                if (to == 7) {
+                    seventh.addCargoStack(amount, eighth);
+                }
+                if (to == 1) {
+                    first.addCargoStack(amount, eighth);
+                }
+                if (to == 9) {
+                    ninth.addCargoStack(amount, eighth);
+                }
+                eighth.removeCargo(amount);
+            }
+            if (from == 9) {
+                if (to == 2) {
+                    second.addCargoStack(amount, ninth);
+                }
+                if (to == 3) {
+                    third.addCargoStack(amount, ninth);
+                }
+                if (to == 4) {
+                    fourth.addCargoStack(amount, ninth);
+                }
+                if (to == 5) {
+                    fifth.addCargoStack(amount, ninth);
+                }
+                if (to == 6) {
+                    sixth.addCargoStack(amount, ninth);
+                }
+                if (to == 7) {
+                    seventh.addCargoStack(amount, ninth);
+                }
+                if (to == 8) {
+                    eighth.addCargoStack(amount, ninth);
+                }
+                if (to == 1) {
+                    first.addCargoStack(amount, ninth);
+                }
+                ninth.removeCargo(amount);
+            }
         }
+
 
         first.printCargo();
         second.printCargo();
@@ -293,6 +557,20 @@ public class Main {
         seventh.printCargo();
         eighth.printCargo();
         ninth.printCargo();
+        //System.out.println("");
+
+
+        //first.printCargo();
+        //second.printCargo();
+        //third.printCargo();
+        //fourth.printCargo();
+        //fifth.printCargo();
+        //sixth.printCargo();
+        //seventh.printCargo();
+        //eighth.printCargo();
+        //ninth.printCargo();
+        
+
 
 
     }
